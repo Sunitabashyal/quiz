@@ -28,12 +28,13 @@ echo Database %MYSQL_DATABASE% created successfully...........
 REM ----------------------------------------------------------------------------------------------------------------
 
 
+set quiz_query_cmd=%MYSQL_BIN_PATH%\mysql.exe -h %mysql_host% -u %MYSQL_USER% -D %MYSQL_DATABASE%
 
-REM Set database and table names
+
+REM Create User Table
 set table_name=user
-
 REM Create the questions table
-set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (user_id INT,random_id VARCHAR(22),name VARCHAR(40),email VARCHAR(60),address VARCHAR(50));"
+set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (id INT AUTO_INCREMENT PRIMARY KEY, uuid VARCHAR(22), name VARCHAR(40),email VARCHAR(60),address VARCHAR(50));"
 REM user.is_admin bool
 set create_table_cmd=%quiz_query_cmd% -e %create_table_query%
 
@@ -44,14 +45,10 @@ REM ----------------------------------------------------------------------------
 
 
 
-set quiz_query_cmd=%MYSQL_BIN_PATH%\mysql.exe -h %mysql_host% -u %MYSQL_USER% -D %MYSQL_DATABASE%
 
-REM Set database and table names
+REM Create Question Table
 set table_name=question
-
-REM Create the questions table
-set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% ( id INT PRIMARY KEY AUTO_INCREMENT, question_text TEXT NOT NULL,  option_a VARCHAR(255) NOT NULL,  option_b VARCHAR(255) NOT NULL, option_c VARCHAR(255) NOT NULL, option_d VARCHAR(255) NOT NULL, correct_option VARCHAR(1) NOT NULL );"
-
+set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (id INT AUTO_INCREMENT PRIMARY KEY, question_text TEXT NOT NULL, option_a VARCHAR(255) NOT NULL, option_b VARCHAR(255) NOT NULL, option_c VARCHAR(255) NOT NULL, option_d VARCHAR(255) NOT NULL, correct_option VARCHAR(1) NOT NULL );"
 set create_table_cmd=%quiz_query_cmd% -e %create_table_query%
 
 :: Run the MySQL command
@@ -60,12 +57,9 @@ echo Table %table_name% created successfully.............
 REM ------------------------------------------------------------------------------------------------------------------
 
 
-REM Set database and table names
-set table_name=AskedQuestion
-
-REM Create the AskedQuestion table
-set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% ( submitted_ans varchar(1),score INT);"
-
+REM Create asked question table
+set table_name=asked_question
+set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (id INT AUTO_INCREMENT PRIMARY KEY, submitted_ans varchar(1), score INT);"
 set create_table_cmd=%quiz_query_cmd% -e %create_table_query%
 
 :: Run the MySQL command
@@ -74,14 +68,9 @@ echo Table %table_name% created successfully.............
 REM ------------------------------------------------------------------------------------------------------------------
 
 
-set quiz_query_cmd=%MYSQL_BIN_PATH%\mysql.exe -h %mysql_host% -u %MYSQL_USER% -D %MYSQL_DATABASE%
- 
-
-REM Set database and table names
-set table_name=Quiz
-
-REM Create the questions table
-set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (FOREIGN KEY (customer_id) REFERENCES customers(customer_id), score INT, CURRENTDATE(YYYY-MM-DD) INT );"
+REM Create quiz table
+set table_name=quiz
+set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (id INT AUTO_INCREMENT PRIMARY KEY, user_id INT, score INT, created_on DATETIME, FOREIGN KEY (user_id) REFERENCES user(id) );"
 
 set create_table_cmd=%quiz_query_cmd% -e %create_table_query%
 
@@ -89,6 +78,3 @@ set create_table_cmd=%quiz_query_cmd% -e %create_table_query%
 %create_table_cmd%
 echo Table %table_name% created successfully.............
 REM ------------------------------------------------------------------------------------------------------------------
- 
-set quiz_query_cmd=%MYSQL_BIN_PATH%\mysql.exe -h %mysql_host% -u %MYSQL_USER% -D %MYSQL_DATABASE%
-

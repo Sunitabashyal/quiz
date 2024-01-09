@@ -7,7 +7,7 @@ function get_password_hash($password){
 
 function is_unique_email($email){
     // check_unique_email_from_db_query
-    return true;
+    return false;
 }
 
 function save_to_db($email, $name, $address, $password){
@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $address = isset($_POST['address']) ? $_POST['address'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $confirm_password = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
 
     if (!is_unique_email($email)){
-        echo "at unique email error";
         $error_message = "This email has already registered.";
         $encoded_error_message = urlencode($error_message);
         header("location: /register.php?error=$encoded_error_message");

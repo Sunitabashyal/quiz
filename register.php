@@ -1,10 +1,10 @@
 <?php
-
+$error_message = "";
 if (isset($_GET['error'])){
     $error_message = urldecode($_GET['error']);
 }
 $page_header = "Register Page";
-$error_message = "";
+
 ?>
 
 <!DOCTYPE html>
