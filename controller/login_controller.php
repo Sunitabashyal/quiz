@@ -11,6 +11,7 @@
     function get_uuid_from_email($email){
         $uuid = 'abcd';
         return $uuid;
+        //
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){

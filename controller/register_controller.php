@@ -7,12 +7,18 @@ function get_password_hash($password){
 
 function is_unique_email($email){
     // check_unique_email_from_db_query
+<<<<<<< Updated upstream
     return true;
+=======
+    SELECT DISTINCT email
+      FROM users;
+    return username;
+>>>>>>> Stashed changes
 }
 
 function save_to_db($email, $name, $address, $password){
     //save the parameters here.
-    // use hash password using get_password_hash function to save the database.
+    // use hash password using get_password_hash function to save the database user.
 }
 
 function confirm_password_ok($password, $confirm_password){
