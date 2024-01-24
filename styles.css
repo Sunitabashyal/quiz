@@ -3,3 +3,103 @@ ul.no-list {
     padding: 0; /* Optionally remove default padding */
     margin: 0; /* Optionally remove default margin */
   }
+
+
+body {
+    margin : 30px;
+}
+
+form.form-class {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.margin-panel {
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Style the input fields */
+input.input-class {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+/*input[type="submit"].submit-button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"].submit-button:hover {
+    background-color: #45a049;
+}*/
+
+
+/* Style the input with class "submit-button" */
+.submit-button {
+    background-color: #4C9950;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+}
+
+.submit-button:hover {
+    background-color: #45CC49;
+}
+
+
+a {
+    background-color: #BBFF99;
+    color: #3498db; /* Set the default text color */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s; /* Smooth transition for color change */
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Change text color on hover */
+a:hover {
+    color: #2980b9;
+}
+
+/* Style visited anchor tags */
+a:visited {
+    color: #34495e; /* Set the color for visited links */
+}
+
+
+.link {
+    background-color: #BBFF99;
+    color: #3498db; /* Set the default text color */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s; /* Smooth transition for color change */
+    margin: 20px;
+    padding: 10px;
+    cursor:pointer;
+}
+
+nav.navigation-bar {
+    color: green;
+    padding: 10px;
+}

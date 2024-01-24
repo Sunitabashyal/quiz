@@ -34,7 +34,7 @@ set quiz_query_cmd=%MYSQL_BIN_PATH%\mysql.exe -h %mysql_host% -u %MYSQL_USER% -D
 REM Create User Table
 set table_name=user
 REM Create the questions table
-set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (id INT AUTO_INCREMENT PRIMARY KEY, uuid VARCHAR(22), name VARCHAR(40),email VARCHAR(60),address VARCHAR(50));"
+set create_table_query="CREATE TABLE IF NOT EXISTS %table_name% (id INT AUTO_INCREMENT PRIMARY KEY, uuid VARCHAR(22), name VARCHAR(40), email VARCHAR(60) UNIQUE, address VARCHAR(50), password VARCHAR(255) NOT NULL, is_admin BOOLEAN NOT NULL DEFAULT FALSE);"
 REM user.is_admin bool
 set create_table_cmd=%quiz_query_cmd% -e %create_table_query%
 
