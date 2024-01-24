@@ -1,22 +1,31 @@
 <?php
-    
+
+include "db_controller.php";
+
 function get_password_hash($password){
     return password_hash($password, PASSWORD_DEFAULT);
 }
 
-
 function is_unique_email($email){
     // check_unique_email_from_db_query
-    return false;
+    $query = "select count(*) as row_count from user where email='" . $email. "'";
+    $query_result = run_select_query($query, $single=true);
+    echo $query_result;
+    if ($query_result['row_count'] == 0){
+        return true;
+    }
 }
 
 function save_to_db($email, $name, $address, $password){
-    //save the parameters here.
-    // use hash password using get_password_hash function to save the database.
+    $query = "INSERT INTO user (email, name, address, password) VALUES ('" . $email ."', '" .$name ."', '". $address ."', '". get_password_hash($password) . "');";
+    run_query($query);
 }
 
 function confirm_password_ok($password, $confirm_password){
-    return true;
+    if ($password == $confirm_password){
+        return true;
+    }
+    return false;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){

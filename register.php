@@ -1,4 +1,5 @@
 <?php
+
 $error_message = "";
 if (isset($_GET['error'])){
     $error_message = urldecode($_GET['error']);
@@ -18,13 +19,13 @@ $page_header = "Register Page";
 <body>
 	<h2><?php echo $page_header ?></h2>
 	<a href="index.php">Home</a>
-	<form method="post" action="/controller/register_controller.php">
+	<form class="form-class" method="post" action="/controller/register_controller.php">
         <p style="color:red;"><?php echo $error_message ?></p>
         <label for="email">Email:</label>
-        <input type="text" name="email" required>
+        <input class="input-class" type="text" name="email" required>
         <br>
         <label for="name">Name:</label>
-        <input type="text" name="name" required>
+        <input class="input-class" type="text" name="name" required>
         <br>
         <label for="address">Address:</label>
         <input type="text" name="address" required>
@@ -36,7 +37,7 @@ $page_header = "Register Page";
         <input type="password" name="confirm_password" required>
         <br>
         <!-- Add more form fields as needed -->
-        <input type="submit" value="Submit">
+        <input class="input-class submit-button" type="submit" value="Submit">
     </form>
 	</form>
 
