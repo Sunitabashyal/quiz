@@ -8,9 +8,10 @@
 </head>
 
 <body>
-	<h2><?php echo $page_header ?></h2>
-	
-	<div>
+	<div class="center-align">
+		<h2><?php echo $page_header ?></h2>
+	</div>
+	<div class="user-detail">
 		<h4><?php echo $user["email"] ?></h4>
 		<h4><?php echo $user["name"] ?></h4>
 		<h4><?php echo $user["address"] ?></h4>

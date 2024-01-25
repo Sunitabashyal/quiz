@@ -107,10 +107,27 @@ nav.navigation-bar {
     padding: 10px;
 }
 
-    .rules {
+.rules {
   font-style: italic;
   font-size: 16px;
   color: #333;
+}
+
+.user-detail {
+    float:right;
+    border: 1px solid blue;
+    background-color: #999999;
+    margin: 10px;
+    padding: 20px;
+}
+
+.main-content{
+    text-align: center;
+    margin: 20px;
+    padding:10px;
+    height: 400px;
+    width:70%;
+    background-color: #cccccc;
 }
 
 

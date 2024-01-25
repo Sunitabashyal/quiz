@@ -6,13 +6,14 @@ include "base.php";
 
 ?>
 
-<div class=rules>
-1. There are two rounds.</br>
-2. First round contains two questions each carrying 10 marks.</br>
-3. If user gains minimum 10 marks can go to next round.</br>
-4. Second round contains 8 questions carrying 10 marks each.</br>
-5. Timer of 30 seconds is provided if user is unable to answer next question will appear.</br>
-	<form action="play_quiz.php">
-		<input type="submit" value="Start to Play"/>
-	</form>
+<div class="rules main-content">
+	1. There are two rounds.</br>
+	2. First round contains two questions each carrying 10 marks.</br>
+	3. If user gains minimum 10 marks can go to next round.</br>
+	4. Second round contains 8 questions carrying 10 marks each.</br>
+	5. Timer of 30 seconds is provided if user is unable to answer next question will appear.</br>
+	
 </div>
+<form class="form-class" action="play_quiz.php">
+	<input class="submit-button" type="submit" value="Start to Play"/>
+</form>
