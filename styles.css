@@ -3,8 +3,11 @@ ul.no-list {
     padding: 0; /* Optionally remove default padding */
     margin: 0; /* Optionally remove default margin */
   }
-
-
+h2.register{
+ color: #333;
+ font-family: bold;
+    text-align: center;
+}
 body {
     margin : 30px;
 }
@@ -103,3 +106,11 @@ nav.navigation-bar {
     color: green;
     padding: 10px;
 }
+
+    .rules {
+  font-style: italic;
+  font-size: 16px;
+  color: #333;
+}
+
+

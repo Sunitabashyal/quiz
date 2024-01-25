@@ -28,13 +28,13 @@ $page_header = "Register Page";
         <input class="input-class" type="text" name="name" required>
         <br>
         <label for="address">Address:</label>
-        <input type="text" name="address" required>
+        <input  class="input-class" type="text" name="address" required>
         <br>
         <label for="password">Password:</label>
-        <input type="password" name="password" required>
+        <input class="input-class" type="password" name="password" required>
         <br>
         <label for="confirm_password">Confirm Password:</label>
-        <input type="password" name="confirm_password" required>
+        <input class="input-class" type="password" name="confirm_password" required>
         <br>
         <!-- Add more form fields as needed -->
         <input class="input-class submit-button" type="submit" value="Submit">
