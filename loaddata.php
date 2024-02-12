@@ -4,7 +4,7 @@
 $mysql_config = array(
     'host' => 'localhost',
     'user' => 'root',
-    'password' => 'root',
+    'password' => '',
     'database' => 'quiz',
 );
 

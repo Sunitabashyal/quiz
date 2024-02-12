@@ -1,11 +1,8 @@
 <?php
 
-if (isset($_GET['error'])){
-    $error_message = urldecode($_GET['error']);
-}
-if (isset($_GET['success'])){
-    $success_message = urldecode($_GET['success']);
-}
+
+$error_message = isset($_GET['error']) ? urldecode($_GET['error']) : '';
+$success_message = isset($_GET['success']) ? urldecode($_GET['success']) : '';
 
 $page_header = "Login Page";
 
