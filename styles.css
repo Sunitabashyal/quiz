@@ -3,14 +3,18 @@ ul.no-list {
     padding: 0; /* Optionally remove default padding */
     margin: 0; /* Optionally remove default margin */
   }
-h2.register{
- color: #333;
- font-family: bold;
-    text-align: center;
+
+
+
+li.keep-margin {
+	margin:10px;
+	padding:5px;
 }
+
 body {
-    margin : 30px;
+	margin : 30px;
 }
+
 
 form.form-class {
     max-width: 400px;
@@ -23,18 +27,18 @@ form.form-class {
 
 /* Style the form labels */
 label {
-    display: block;
-    margin-bottom: 8px;
+    margin: 5px;
 }
 
 .center-align {
-    text-align: center;
+	text-align: center;
 }
 
 .margin-panel {
-    width: 90%;
-    margin: 20px;
-    padding: 10px;
+	width: 90%;
+	margin: 20px;
+	padding: 10px;
+	text-align: left;
 }
 
 /* Style the input fields */
@@ -46,25 +50,13 @@ input.input-class {
     border-radius: 4px;
 }
 
-/* Style the submit button */
-/*input[type="submit"].submit-button {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-input[type="submit"].submit-button:hover {
-    background-color: #45a049;
-}*/
-
-
 /* Style the input with class "submit-button" */
 .submit-button {
     background-color: #4C9950;
     color: white;
     cursor: pointer;
-    margin: 10px;
-    padding: 5px;
+    margin: 5px;
+    padding: 15px;
 }
 
 .submit-button:hover {
@@ -73,7 +65,7 @@ input[type="submit"].submit-button:hover {
 
 
 a {
-    background-color: #BBFF99;
+	background-color: #BBFF99;
     color: #3498db; /* Set the default text color */
     text-decoration: none; /* Remove underline by default */
     transition: color 0.3s; /* Smooth transition for color change */
@@ -93,7 +85,7 @@ a:visited {
 
 
 .link {
-    background-color: #BBFF99;
+	background-color: #BBFF99;
     color: #3498db; /* Set the default text color */
     text-decoration: none; /* Remove underline by default */
     transition: color 0.3s; /* Smooth transition for color change */
@@ -107,27 +99,71 @@ nav.navigation-bar {
     padding: 10px;
 }
 
+.profile {
+	float: right;
+	position: relative;
+	border: 1px solid red;
+	margin: 10px;
+	padding: 10px;
+	background-color: #dddddd;
+}
+
+.main-content {
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	border : 1px solid black;
+	width: 70%;
+	min-height: 400px;
+	background-color: #dddddd;
+    font-size: 22px;
+}
+
 .rules {
-  font-style: italic;
-  font-size: 16px;
-  color: #333;
-}
-
-.user-detail {
-    float:right;
-    border: 1px solid blue;
-    background-color: #999999;
-    margin: 10px;
-    padding: 20px;
-}
-
-.main-content{
-    text-align: center;
+	text-align: left;
+    font-size: 25px;
+    line-height: 1.5;
     margin: 20px;
-    padding:10px;
-    height: 400px;
-    width:70%;
-    background-color: #cccccc;
 }
 
+.question-text {
+	font-size: 22px;
+}
 
+.option-list {
+	font-size: 18px;
+	display: inline !important;
+
+}
+
+.quiz-round-title {
+	font-size: 30px;
+	background-color: #daaabb;
+	padding: 10px;
+	margin: 5px;
+}
+
+.question-number {
+	font-size: 20px;
+	float:right;
+}
+
+label.highlight-green {
+	
+	padding: 10px;
+}
+
+label.highlight-green:hover {
+	background-color : #aaddaa;
+}
+
+.score-board {
+    font-size : 40px;
+    text-align: center;
+}
+
+.score-board > .score-number {
+    margin-left: 40px;
+    font-size : 200px;
+
+}

@@ -9,9 +9,11 @@ function check_login_credentials($email, $password){
     return password_verify($password, $query_result['password']);
 }
 
+
 function get_uuid_from_email($email){
-    $uuid = 'abcd';
-    return $uuid;
+    $query = "select uuid from user where email='" . $email . "';";
+    $query_result = run_select_query($query, $single=true);
+    return $query_result["uuid"];
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -33,4 +35,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 }
     
 ?>
-

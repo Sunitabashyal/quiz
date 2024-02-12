@@ -1,5 +1,5 @@
 [{
-	"question_text": "What is the powerhouse of the cell?",
+	"question_text": "What is the powerhouse of the cell number 1?",
 	"option_a": "Neuclus",
 	"option_b": "Golgi Aparatus",
 	"option_c": "Mitochondrion",
@@ -8,7 +8,124 @@
 },
 
 {
-	"question_text": "Name the process by which plants make their own food?",
+	"question_text": "Name the process by which plants make their own food number 1?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 2?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+{
+	"question_text": "Name the process by which plants make their own food number 2?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 3?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+
+{
+	"question_text": "Name the process by which plants make their own food number 3?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 4?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+
+{
+	"question_text": "Name the process by which plants make their own food number 4?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 5?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+
+{
+	"question_text": "Name the process by which plants make their own food number 5?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 6?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+{
+	"question_text": "Name the process by which plants make their own food number 6?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 7?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+
+{
+	"question_text": "Name the process by which plants make their own food number 7?",
+	"option_a": "Photosynthesis",
+	"option_b": "Respiration",
+	"option_c": "Digestion",
+	"option_d": "Transpiration",
+	"correct_option": "a"
+},
+{
+	"question_text": "What is the powerhouse of the cell number 8?",
+	"option_a": "Neuclus",
+	"option_b": "Golgi Aparatus",
+	"option_c": "Mitochondrion",
+	"option_d": "Endoplasmic reticulum",
+	"correct_option": "c"
+},
+
+{
+	"question_text": "Name the process by which plants make their own food number 8?",
 	"option_a": "Photosynthesis",
 	"option_b": "Respiration",
 	"option_c": "Digestion",

@@ -10,14 +10,19 @@ function is_unique_email($email){
     // check_unique_email_from_db_query
     $query = "select count(*) as row_count from user where email='" . $email. "'";
     $query_result = run_select_query($query, $single=true);
-    echo $query_result;
     if ($query_result['row_count'] == 0){
         return true;
     }
 }
 
+
+function generate_random_string($length = 18) {
+    $randomBytes = random_bytes(ceil($length / 2));
+    return substr(bin2hex($randomBytes), 0, $length);
+}
+
 function save_to_db($email, $name, $address, $password){
-    $query = "INSERT INTO user (email, name, address, password) VALUES ('" . $email ."', '" .$name ."', '". $address ."', '". get_password_hash($password) . "');";
+    $query = "INSERT INTO user (email, name, address, password, uuid) VALUES ('" . $email ."', '" .$name ."', '". $address ."', '". get_password_hash($password). "', '". generate_random_string() . "');";
     run_query($query);
 }
 
@@ -59,4 +64,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 }
     
 ?>
-

@@ -1,6 +1,5 @@
 <?php
 
-$error_message = "";
 if (isset($_GET['error'])){
     $error_message = urldecode($_GET['error']);
 }
@@ -28,12 +27,12 @@ $page_header = "Register Page";
         <input class="input-class" type="text" name="name" required>
         <br>
         <label for="address">Address:</label>
-        <input  class="input-class" type="text" name="address" required>
+        <input class="input-class" type="text" name="address" required>
         <br>
         <label for="password">Password:</label>
         <input class="input-class" type="password" name="password" required>
         <br>
-        <label for="confirm_password">Confirm Password:</label>
+        <label for="confirm_password">Password:</label>
         <input class="input-class" type="password" name="confirm_password" required>
         <br>
         <!-- Add more form fields as needed -->

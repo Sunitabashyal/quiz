@@ -1,3 +1,13 @@
+<?php 
+
+if (isset($_POST['logout'])) {
+    logout();
+    header("location: /login.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,28 +18,21 @@
 </head>
 
 <body>
-	<div class="center-align">
-		<h2><?php echo $page_header ?></h2>
+	<div class="margin-panel">
+			<div class="profile">
+			<nav class="navigation-bar">
+				<h4 class="center-align margin-panel"><?php echo $user["email"] ?></h4>
+				<h4><?php echo $user["name"] ?></h4>
+				<h4><?php echo $user["address"] ?></h4>
+				<form method="post" action="home.php">
+					<input class="link" type="submit" value="logout" name="logout" />
+				</form>
+			</nav>
+		</div>
+		<h2 class="center-align margin-panel"><?php echo $page_header ?></h2>
 	</div>
-	<div class="user-detail">
-		<h4><?php echo $user["email"] ?></h4>
-		<h4><?php echo $user["name"] ?></h4>
-		<h4><?php echo $user["address"] ?></h4>
-		<form method="post" action="home.php">
-			<input type="submit" value="logout" name="logout" />
-		</form>
-	</div>
-	
+
 </body>
 </html>
 
 
-<?php 
-
-if (isset($_POST['logout'])) {
-    logout();
-    header("location: /login.php");
-    exit();
-}
-
-?>

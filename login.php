@@ -1,6 +1,5 @@
 <?php
-$error_message = "";
-$success_message = "";
+
 if (isset($_GET['error'])){
     $error_message = urldecode($_GET['error']);
 }

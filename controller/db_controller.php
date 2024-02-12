@@ -2,7 +2,7 @@
 
 $db_hostname = "localhost";
 $db_username = "root";
-$db_password = "";
+$db_password = "root";
 $db_name = "quiz";
 
 
@@ -13,8 +13,6 @@ function run_query($query){
 
 	// Check connection
 	if ($conn->connect_error) {
-		echo "error ";
-		echo "connection error is here" . $conn->connect_error;
 	    die("Connection failed: " . $conn->connect_error);
 	}
 	$conn->query($query);
@@ -40,7 +38,9 @@ function run_select_query($query, $single=false){
 
 	$result_list = array();
 	if ($single){
-		return $result->fetch_assoc();
+		$value = $result->fetch_assoc();
+		$conn->close();
+		return $value;
 	}else {
 		while ($row = $result->fetch_assoc()) {
 		    array_push($result_list, $row);
