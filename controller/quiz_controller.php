@@ -93,12 +93,12 @@ function get_question_type($quiz_id, $user_id){
     $question_number_counter = $asked_ques_count+1;
     foreach ($quiz_rules as $key => $val){
         $rulewise_ques_count += $val;
-    	if ($asked_ques_count < $rulewise_ques_count){
-    	    return $key;
-    	}else{
-    	    continue;
-    	}
-    	
+        if ($asked_ques_count < $rulewise_ques_count){
+            return $key;
+        }else{
+            continue;
+        }
+        
     }
     return null;
     
@@ -111,12 +111,12 @@ function save_question_into_the_quiz($question_id, $question_type, $user_id){
     if ($quiz_id == null) {
         $quiz_uuid = generate_random_string();
         $query = "insert into quiz (user_id, uuid) values(" .$user_id .", '" .$quiz_uuid .  "');";
-    	run_query($query);
+        run_query($query);
 
         $quiz_id_query = "select id from quiz where uuid='" . $quiz_uuid . "';";
         $quiz_query_result = run_select_query($quiz_id_query, $single=true);
         $quiz_id = $quiz_query_result["id"];
-    }	
+    }   
     $asked_question_query = "insert into asked_question (question_id, quiz_id, user_id, question_type, uuid) values(" . $question_id . ", " .$quiz_id . ", " .$user_id . ", '" .$question_type . "', '"  .$asked_question_uuid ."');";
     run_query($asked_question_query);
     return $asked_question_uuid;
